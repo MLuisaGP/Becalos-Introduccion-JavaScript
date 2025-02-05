@@ -1,6 +1,6 @@
 console.log('Hola Mundo');
 
-//------Variables Ordinarias------
+//------Variables Primitivas------
 
 //String
 let nombre = "Ivan";
