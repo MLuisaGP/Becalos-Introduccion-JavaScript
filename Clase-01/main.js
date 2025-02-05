@@ -19,7 +19,7 @@ let numeroGrande = 12312324896854n;
 //Typeof - permite que veamos el tipo de variable.
 console.log(typeof cuenta);
 
-//------Variables compuestasa------
+//------Variables compuestas------
 //Objetos
 let persona ={
     nombre:"Ivan",
