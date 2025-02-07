@@ -19,8 +19,10 @@ if(month>=3 && month<=5){
     console.log('Es verano');
 }else if(month>=9 && month<=11){
     console.log('Es otoño');
-}else{
+}else if(month===1 || month===2 || month===12){
     console.log('Es invierno');
+}else{
+    console.log('Mes no valido');
 }
 
 //Numero primo
