@@ -62,7 +62,7 @@ se tienen cinco archivos:
 
 - [control-switch.js](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-02/control-switch.js) En este archivo se tienen notas del uso del switch. 
 
-- [tipos-de-practice_2.js](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-02/tipos-de-practice_2.js) En este archivo se tiene la actividad de practica. Es el archivo más importante ya que muestra la actividad solicitada por Dev.F. Este cuenta con una logica donde se muestra un mensaje personalizado segun una calificacion. La calificacion se creo de forma aleatoria y se hizo uso de variables, constantes y estructrua if.
+- [practice_2.js](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-02/practice_2.js) En este archivo se tiene la actividad de practica. Es el archivo más importante ya que muestra la actividad solicitada por Dev.F. Este cuenta con una logica donde se muestra un mensaje personalizado segun una calificacion. La calificacion se creo de forma aleatoria y se hizo uso de variables, constantes y estructrua if.
 La respuesta se puede ver a continuación:
 
       Tu nota fue 62. Suficiente para pasar
