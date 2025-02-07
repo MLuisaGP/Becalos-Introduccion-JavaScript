@@ -35,3 +35,8 @@ console.log(x);//7
 let division = 0;
 console.log(division/0);//NaN
 
+
+//Numeros randoms
+let numeroAleatorio = Math.floor(Math.random()*101); // redondea al numero hacia abajo (0-100)
+console.log(numeroAleatorio);
+
