@@ -20,6 +20,6 @@ const arrowFunction= () => {
     console.log("Hola es una flecha=>");//3RA POSICION DE  EJECUCION
 } 
 arrowFunction();
-document.getElementById("boton").addEventListener("click", function(){
-    alert("Hola mundo");
-})
+// document.getElementById("boton").addEventListener("click", function(){
+//     alert("Hola mundo");
+// })
