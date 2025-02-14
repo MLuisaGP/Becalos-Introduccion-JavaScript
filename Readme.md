@@ -104,6 +104,43 @@ se tienen cuatro archivos:
 
 - [note-class.js](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-03/note-class.js) Archivo donde se almacena las notas realizadas en clases. Aqui se ven anotaciones referentes a arrays y los diferentes ciclos.
 
+## Clase 4. Funciones en JavaScript
+
+En esta clase de vio los conceptos básicos de funciones, viendo los diferentes tipos de funciones y la forma de utilizarlos.
+
+En la carpeta [Clase-04](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/tree/main/Clase-04)
+se tienen seis archivos:
+- [anonimos.js](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-04/anonimos.js) En este archivo se tienen las anotaciones de como y donde utilizar una funcion anonima. Aqui hay una introduccion a los callbacks.
+
+- [arrows.js](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-04/arrows.js) Archivo donde se tiene ejemplo de la funciones flechas. Tambien se tienen anotaciones sobre la diferencia entre las variables declaradas con let y var. Las variables declaradas con let mantienen una mayor seguridad, mientras que las variables var no son recomendadas de usar ya que estas pueden ser declaradas mas de una vez con el mismo nombre o en cualquier parte del codigo se pueden llamar.
+
+- [ejercicio.js](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-04/ejercicio.js) Ejercicios realizados al final de la clase 4 con el proposito de reforzar lo aprendido. Las actividades realizadas fueron las siguientes:
+   - Varificador de palindromo. Se utiliza una funcion que recorre una lista de palabras y va verificando se la palabra es palindromo o no.
+   - Numeros mayores de un numero. Se manda un numero que se desea que a partir de este se guarden numeros mayores. A continuacion se puede apreciar el codigo del ejercicio.
+
+         // Filtrar los numeros mayores de un numero
+         function filtrarMayor(numeroBase){
+         let numerosMayores=[]
+         for (let i = 0; i < 10; i++) {
+               let numero = Math.floor(Math.random()*101); 
+               if(numeroBase<numero)numerosMayores.push(numero);
+         }
+         return numerosMayores;
+         }         
+         let lista = filtrarMayor(45);
+         console.log(lista);
+  
+  - Obtener el area de un circulo. Para este ejercicio se hizo uso de una funcion flecha.
+  - Ecuaciones metematicas. Se hace uso de una funcion con paramteros defaults.
+
+- [funciones.js](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-04/funciones.js) Archivo que contiene las formas basicas de crear una funcion con y sin parametros. Tambien se tiene la forma en como llamar una funcion.
+
+- [index.html](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-04/index.html) Este archivo index.html, cuenta con dos botones uno para agregar libros y otro para ver los libros. Este archivo esta con el proposito de agregar un plus extra a la practica de la clase 4, donde al dar click en el boton de agregar libro, el usuario puede ingresar el nombre de un libro que ya ha leido y este se almacenara en una variable global. Y si desea ver los libros que se tienen almacenados basta con darle click en ver libros y estos se mostraran en consola.
+
+- [libros.js](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-04/libros.js) Archivo que contiene la practica de la clase 4. El proposito es utilizar las funciones aprendidas en clase y el uso de variables globales. Se tiene una variable con el nombre librosLeidos, en esta se almacenan los libros leidos almacenados por el usuario ( Esta seria una variable global). Se crean dos funciones:
+  - agregarLibro: funcion flecha que agrega un libro al array libros leidos y tiene un parametro con el nombre libro, parametro que sera ingresado por el usuario y sera almacenada en el arreglo.
+  - mostrarLibrosLeidos: funcion flecha que muestra en consola los libros leidos e insertados por el usuario.
+
 
 ## Autor
 
