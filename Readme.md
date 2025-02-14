@@ -73,6 +73,38 @@ La respuesta se puede ver a continuación:
       //Numeros aleatorios
       let numeroAleatorio = Math.floor(Math.random()*101); //Math.floor- redondea al numero hacia abajo.Se genera un numero entre 0 y 100
 
+## Clase 3. Arreglos y ciclos en JavaScript
+
+En esta clase se vio de fondo sobre los arreglos y los ciclos mas comunes en javascript.
+
+En la carpeta de [Clase-03](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/tree/main/Clase-03)
+se tienen cuatro archivos:
+- [ejercicio.js](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-03/ejercicio.js) Se realizan diferentes ejercicios con el proposito de reforzar lo aprendido dando uso de arreglos y ciclos en diferentes situaciones:
+  - Realizar una tabla de multiplicar, se ingresa un numero y se imprmie la multiplicacion de ese numero hasta el numero 10.
+  - Contador de digitos, se manda un numero con varios digitos por consola e imprime la cantidad de digitos que posee ese numero.
+  - Con el mismo numero ingresado en el ejercicio anterior, se obtiene el total de la suma de cada uno de los digitos.
+  - Obtener el numero mayor dentro de un array, se manda un array con diferentes numeros y se va revisando cada uno de ellos, guardando en una variable el digito mayor, se inicia teniendo en la variable como valor 0 y se va comparando con el siguiente digito, si el siguiente digito es mayor entonces este procige a ser almacenado en la variable.
+  
+  Para este ejercicio es necesario correrlo desde [index.html](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-03/index.html), ya que se introduccen los datos desde promt
+
+- [frutas.js](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-03/frutas.js) En este archivo contienen la practica de la clase. Se clasifican frutas en 5 tipos diferentes: acidas, semiacidas, neutras, dulces y otros. Se envia un arreglo con diferentes frutas, y se va procesando ese arreglo donde en se va aumentando el numero de frutas segun su tipo en un objeto clasificador.
+
+      //ARRAY FRUTAS:
+      let frutas = [
+      "kiwi", "limon", "naranja", "uva", "arandanos",
+      "fresa", "mango", "mandarina", "ciruela", "nispero",
+      "coco", "aguacate", "almendra", "nuez", "cacahuate",
+      "platanos", "cereza", "higo", "sandia", "granada","piña",
+      "pitaya"];
+
+      //RESPUESTA:
+      { acidas: 6, semiacidas: 5, neutras: 5, dulces: 5, otro: 1 }
+
+- [index.html](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-03/index.html) Archivo de indice de la carpeta, con este archivo html se puede correr para ejecutar el archivo.[ejercicio.js](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-03/ejercicio.js)
+
+- [note-class.js](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-03/note-class.js) Archivo donde se almacena las notas realizadas en clases. Aqui se ven anotaciones referentes a arrays y los diferentes ciclos.
+
+
 ## Autor
 
 Creado por [MluisaGP](https://github.com/MLuisaGP)
