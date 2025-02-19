@@ -142,6 +142,23 @@ se tienen seis archivos:
   - mostrarLibrosLeidos: funcion flecha que muestra en consola los libros leidos e insertados por el usuario.
 
 
+## Clase 5. Intro a Objects en JavaScript
+
+En esta clase se da introduccion al uso de objetos, clases y metodos.
+
+En la carpeta [Clase-05](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/tree/main/Clase-05)
+se tienen dos archivos:
+- [Objetos.js](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-05/Objetos.js) Archivo realizado en clases. En este archivo se hace anotaciones a las diferentes formas de crear objetos, el uso de clases y de metodos. Se puede ver las ventajas de crear una clase, el cual es el model de los objetos haciendo que una clase nazcan varios objetos de ella. Asi mismo se vio las ventajas de los objetos y como nos permite tener esa flexibilidad de crear distinsta cosas.
+
+- [Practica5.js](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-05/Practica5.js) En la practica 5 se hace uso de una clase Libros que permite crear diferentes instancias de libros con la información basica de ellos como titulo, autor, anio, estado. Se da uso de metodos para mostrar los datos del libro como diferentes metodos con y sin parametros con el objetivo de agregar capitulo, eliminar capitulos y mostrar los capitulos que poseia cada libro. Gracias a que se implemento la parte de capitulos, se pudo ver como una propiedad de libros puede ser una lista de mas objetos, en este caso los objetos fueron los capitulos.
+El resultado dado en esta actividad la podemos ver acontinuación:
+
+      'En auschwitz no habia prozac' escrito por: Edith Edger publicado en el 2020, se ecuentra Disponible
+      [
+            { titulo: '¿Y ahora qué?', noPaginas: 17 },
+            { titulo: 'Nadie te rechaza excepto tú', noPaginas: 10 }
+      ]
+
 ## Autor
 
 Creado por [MluisaGP](https://github.com/MLuisaGP)
