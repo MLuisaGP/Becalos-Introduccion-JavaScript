@@ -47,6 +47,7 @@ function logIn(){
     let usuario = document.getElementById("username").value;
     let password = document.getElementById("pwd").value;
     if(usuario === user && password ===pwd){
+        
        window.location.href = "home.html"
     }else{
         alert("Lo siento no eres bienvenido")

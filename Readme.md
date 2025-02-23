@@ -159,6 +159,26 @@ El resultado dado en esta actividad la podemos ver acontinuación:
             { titulo: 'Nadie te rechaza excepto tú', noPaginas: 10 }
       ]
 
+
+## Clase 6. Intro al DOM en Java Script
+
+En esta clase se da introduccion al DOm en javascript. El DOM (Document Object Model) en JavaScript es una representación estructurada de un documento HTML o XML. Funciona como una interfaz que permite a JavaScript acceder y manipular el contenido, la estructura y el estilo de una página web. A través del DOM, los desarrolladores pueden modificar elementos, agregar o eliminar nodos, cambiar estilos y responder a eventos en tiempo real, haciendo que las páginas web sean dinámicas e interactivas.
+
+En la carpeta [Clase-06](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/tree/main/Clase-06)
+se encuentran varias carpetas conteniendo los diferentes ejercicios realizados en clase y la practica final de la clase, en esta ocasion se encuentran separadas en carpetas ya que se tienen el html junto con js que estan vinculados.
+- [EjercicioClase](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-06/EjericioClase) 
+Notas y ejercicios realizados en clase, donde se realizan actividades utilizando el DOM. Se comienza a ver como se crean elementos y se agregan a otros, como funciona los nodos, eliminar elementos y la integracion de eventos y callbacks.
+- [ejercicioLectura](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-06/ejercicioLectura)
+Estos son los ejercicios expuestos en la lecturas de esta clase, se integran los ejercicios que solicita las lecturas hacer junto con las soluciones, aqui el script se realizo de forma interna en el html sin la necesidad de crear otro archivo .js con el proposito de ver como se programaria js desde el mismo html.
+- [EjerciciosExtras](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-06/EjerciciosExtras)
+Ejercicios extras realizados en clase. Consiste en tres retos:
+  1.  Con un boton cambiar el color del texto cada vez que se hace click.
+  2.  Crear un boton que permita ocultar y mostrar un parrado. El boton cambia de texto dependiendo si el texto se esta mostrando o ocultado.
+  3.  Crear un contador de clicks, este contador de click se tiene un boton donde cuenta cada vez que le hacen click
+
+
+- [Practica](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-06/Practica) Finalmente se tiene la practica de la clase. La practica consiste en hacer un centro de comentarios. El usuario agrega un comentario el cual se muestra en la pagina junto con el nombre de quien lo comentar y la fecha en que se comento. Estos comentarios se pueden eliminar. Tambien se agregaron boones para darle me gusta a la imagen (si vuelven a darle click al boton se elimina el me gusta que se acaba de agregar) y otro boton para compartir la imagen. Este ejercicio se baso en el sistema que utiliza facebook para comentar una imagen. El resultado final se puede ver en la imagen que se muestra a continuacion.
+  ![Practica de la clase 6](Assets/practica6.png)
 ## Autor
 
 Creado por [MluisaGP](https://github.com/MLuisaGP)
