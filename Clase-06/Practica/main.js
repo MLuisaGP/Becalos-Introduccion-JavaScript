@@ -84,8 +84,10 @@ function dateNow(){
 
     const dia = String(fechaActual.getDate()).padStart(2, '0');
     const mes = String(fechaActual.getMonth() + 1).padStart(2, '0'); // Los meses comienzan desde 0
-    const anio = String(fechaActual.getFullYear()).slice(-2); // Obtener los últimos dos dígitos
+    const anio = String(fechaActual.getFullYear()); // Obtener los últimos dos dígitos
+    const hora = String(fechaActual.getHours()).padStart(2,'0'); // Obtener los últimos dos dígitos
+    const minuto = String(fechaActual.getMinutes()).padStart(2,'0'); // Obtener los últimos dos dígitos
 
-    const fechaFormateada = `${dia}-${mes}-${anio}`;
+    const fechaFormateada = `${dia}-${mes}-${anio} ${hora}:${minuto}`;
     return fechaFormateada;
 }
