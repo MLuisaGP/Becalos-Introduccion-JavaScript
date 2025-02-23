@@ -46,10 +46,8 @@ botonSend.addEventListener("click",function(event){
             contadorComentario--;
             contComment.textContent=contadorComentario;
             if(contadorComentario==0){
-                let textInicioR = document.createElement('p');
-                textInicioR.id = "sin-coment";
-                textInicioR.textContent = "Se el primero en comentar";
-                showComt.appendChild(textInicioR);
+                showComt.innerHTML='<p id="sin-coment">Se el primero en comentar</p>';
+                textoInicio = document.getElementById("sin-coment");
             }
         }
     );
