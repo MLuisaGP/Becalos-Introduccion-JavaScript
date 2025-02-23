@@ -1,20 +1,26 @@
 let botonSend = document.getElementById("btn-send");
 let inputComt = document.getElementById("comentario-text");
 let showComt = document.getElementById("cmts-show");
-let  contComment = document.getElementById("contador-comentarios");
-let  contLikes   = document.getElementById("contador-likes");
-let  contShared  = document.getElementById("contador-shared");
-let  btnLiked  = document.getElementById("btn-liked");
-let  btnComment  = document.getElementById("btn-comment");
-let  btnShared  = document.getElementById("btn-shared");
+let contComment = document.getElementById("contador-comentarios");
+let contLikes   = document.getElementById("contador-likes");
+let contShared  = document.getElementById("contador-shared");
+let btnLiked  = document.getElementById("btn-liked");
+let btnComment  = document.getElementById("btn-comment");
+let btnShared  = document.getElementById("btn-shared");
+let textoInicio = document.getElementById("sin-coment");
 
 let contadorComentario=0;
 let contadorLiked = 4;
 let conadorShared = 3;
 
 botonSend.addEventListener("click",function(event){
-    if(inputComt.value=='')return;
     event.preventDefault();
+
+    if(contadorComentario==0){
+        showComt.removeChild(textoInicio);
+    }
+
+    if(inputComt.value=='')return;
     let contenedor = document.createElement('div')
     contenedor.className='cmt-elemento';
 
@@ -35,10 +41,16 @@ botonSend.addEventListener("click",function(event){
     inputComt.value='';
     contadorComentario++;
     deleteBtn.addEventListener('click',function (){
-        let parentElement = this.parentElement;
-        parentElement.remove();
-        contadorComentario--;
-        contComment.textContent=contadorComentario;
+            let parentElement = this.parentElement;
+            parentElement.remove();
+            contadorComentario--;
+            contComment.textContent=contadorComentario;
+            if(contadorComentario==0){
+                let textInicioR = document.createElement('p');
+                textInicioR.id = "sin-coment";
+                textInicioR.textContent = "Se el primero en comentar";
+                showComt.appendChild(textInicioR);
+            }
         }
     );
     contComment.textContent=contadorComentario;
