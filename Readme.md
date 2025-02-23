@@ -166,7 +166,7 @@ En esta clase se da introduccion al DOm en javascript. El DOM (Document Object M
 
 En la carpeta [Clase-06](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/tree/main/Clase-06)
 se encuentran varias carpetas conteniendo los diferentes ejercicios realizados en clase y la practica final de la clase, en esta ocasion se encuentran separadas en carpetas ya que se tienen el html junto con js que estan vinculados.
-- [EjercicioClase](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-06/EjericioClase) 
+- [EjercicioClase](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-06/EjercicioClase) 
 Notas y ejercicios realizados en clase, donde se realizan actividades utilizando el DOM. Se comienza a ver como se crean elementos y se agregan a otros, como funciona los nodos, eliminar elementos y la integracion de eventos y callbacks.
 - [ejercicioLectura](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-06/ejercicioLectura)
 Estos son los ejercicios expuestos en la lecturas de esta clase, se integran los ejercicios que solicita las lecturas hacer junto con las soluciones, aqui el script se realizo de forma interna en el html sin la necesidad de crear otro archivo .js con el proposito de ver como se programaria js desde el mismo html.
