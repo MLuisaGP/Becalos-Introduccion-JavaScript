@@ -1,0 +1,21 @@
+Document Objet Model
+
+Interfaz que representa al HTML como un arbol de nodos.
+Sirve para manipular elementos html mediante javascript utilizando metodos, podemos cambiar atribulos, estilos, etc.
+
+Nodo raiz -> representa todo el documento DOCTYPE
+Nodo HTML -> Nodo principal
+Nodo head y body ->hijos de principal
+Nodos elemento ->Representa todos los elementos (p, meta, h1 ,etc)
+Nodos textos-> Representa el contenido
+Nodos Atributos -> Represeta los atributos como id, class src etc.
+Nodos de comentarios
+
+
+TIPOS DE EVENTOS
+
+click: Ocurre cuando el usuario hace clic en un elemento.
+mouseover: Ocurre cuando el usuario pasa el mouse sobre un elemento.
+mouseout: Ocurre cuando el usuario mueve el mouse fuera de un elemento.
+keydown: Ocurre cuando el usuario presiona una tecla.
+submit: Ocurre cuando el usuario envía un formulario.

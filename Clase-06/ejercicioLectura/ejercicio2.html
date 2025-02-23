@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cambiar contenido con JavaScript</title>
+
+</head>
+
+<body>
+
+    <h1 id="titulo">¡Bienvenido a mi página!</h1>
+
+    <p id="parrafo">Este es el contenido inicial.</p>
+
+    <button id="cambiarContenido">Mostrar contenido</button>
+
+    <script>
+        let titulo = document.getElementById("titulo");
+        let texto = document.getElementById("parrafo");
+        let botton = document.getElementById("cambiarContenido");
+        texto.style.visibility="hidden";
+        botton.addEventListener("click", function () {
+            if (texto.style.visibility == "hidden") {
+                texto.style.visibility = "visible";
+                botton.textContent = "Ocultar contenido";
+
+            } else {
+                texto.style.visibility = "hidden";
+                botton.textContent = "Mostrar contenido";
+            }
+        });
+        // Tu código de JavaScript irá aquí
+
+    </script>
+
+</body>
+
+</html>
