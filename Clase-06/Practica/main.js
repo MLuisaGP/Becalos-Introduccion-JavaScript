@@ -33,11 +33,11 @@ botonSend.addEventListener("click",function(event){
     let comentario = document.createElement('p');
     comentario.textContent=inputComt.value;
 
-    showComt.appendChild(contenedor);
     contenedor.appendChild(nombre);
     contenedor.appendChild(fecha);
     contenedor.appendChild(deleteBtn);
     contenedor.appendChild(comentario);
+    showComt.insertBefore(contenedor,showComt.firstChild); //Agrega el comentario primero que todos los otros hijos
     inputComt.value='';
     contadorComentario++;
     deleteBtn.addEventListener('click',function (){
