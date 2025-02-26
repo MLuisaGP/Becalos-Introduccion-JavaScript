@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Generador Contraseña</title>
+</head>
+<body>
+    <main>
+        <h1>Generador contraseña</h1>
+        <section class="section-pwd">
+            <div class="container-pwd" id="txt-pwd"></div>
+            <div class="container-icono">
+                <button id="btn-copy"><i class="fa-regular fa-copy"></i></button>
+            </div>
+        </section>
+        <section class="section-setting">
+            <form class="section-form">
+                <div class="container-length">
+                    <label for="length">Cantidad de caracteres</label>
+                    <div class="container-icono" id="num-character">0</div>
+                    <input type="range" name="length" id="length">
+                </div>
+                <div class="container-include">
+                    <label for="allow-upper">Incluir caracteres en mayúsculas</label>
+                    <input type="checkbox" name="allow" id="allow-upper">
+                    <label for="allow-lower">Incluir caracteres en minusculas</label>
+                    <input type="checkbox" name="allow" id="allow-lower">
+                    <label for="allow-numbrer">Incluir numeros</label>
+                    <input type="checkbox" name="allow" id="allow-numbrer">
+                    <label for="allow-symbols">Incluir simbolos</label>
+                    <input type="checkbox" name="allow" id="allow-symbols">
+                </div>
+                <div class="container-strength">
+                    <p>Strength</div>
+                    <div>
+                        <div class="txt-strength" id="lbl-strength"></div>
+                        <div class="icons-strength">
+                            <div class="retangle-indicator" id="strength-level-1"></div>
+                            <div class="retangle-indicator" id="strength-level-2"></div>
+                            <div class="retangle-indicator" id="strength-level-3"></div>
+                            <div class="retangle-indicator" id="strength-level-4"></div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-generate">
+                    Generar
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
