@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", serif;
+}
+.main-login{
+    height: 100vh;
+    display: flex;
+}
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.form-container{
+    width: 50%;
+    background-color: #4a4e69;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.imagen-container{
+    width: 50%;
+    background: url('../img/imagen-login.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.login-container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+label{
+    font-size: 0.8rem;
+}
+input{
+    width: 95%;
+    padding: 2px;
+    margin: 5px 0;
+}
+button{
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    background-color: #4a4e69;
+    color: white;
+    border-radius: 2px;
+    padding: 5px;
+    font-size: 0.7rem;
+}
+button:hover{
+    background-color:#32354a ;
+    transform: scaleX(1.01);
+}
+.error{
+    color: red;
+}
+
+.home-food{
+    width: 60vw;
+}
+
+.main-home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    margin: 5rem;
+    padding: 5rem;
+}
+.main-home h1{
+    color: #4a4e69;
+}
+.comment-container{
+    width: 100%;
+}
+textarea{
+    border: none;
+    background-color: #4a4e693d;
+    width: 100%;
+    border-radius: 2px;
+    height: 5rem;
+}
+.comentarios{
+    
+}
