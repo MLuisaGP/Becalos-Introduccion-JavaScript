@@ -151,3 +151,12 @@ input[type="checkbox"]:checked {
     justify-content: center;
     color: #FFD717;
 }
+#txt-pwd.generado{
+    color: #d6e4f8;
+}
+
+.error{
+    margin: 1rem 0;
+    text-align: left;
+    word-spacing: 0;
+}

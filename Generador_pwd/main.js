@@ -5,6 +5,7 @@ const btnGenerar = document.getElementById('btn-generate');
 const alertaError = document.getElementById('error');
 const txtPwd = document.getElementById('txt-pwd');
 const labelStrength = document.getElementById('lbl-strength');
+const btnCopiar = document.getElementById('btn-copy');
 
 const minusculas = "abcdefghijklmnopqrstuvwxyz";
 const mayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -14,11 +15,12 @@ const simbolos = "!@#$%^&*()_+-=[]{}|;:',.<>?/";
 let caracteres = "";
 let puntos = 0;
 let checks = 0;
+let level = 0;
 const opciones = {
     'allow-upper': {value:mayusculas,puntos:1},
     'allow-lower': {value:minusculas,puntos:1},
     'allow-number': {value:numeros,puntos:1},
-    'allow-symbols': {value:simbolos,puntos:2}
+    'allow-symbols': {value:simbolos,puntos:1}
 };
 
 Object.keys(opciones).forEach(id => {
@@ -78,16 +80,22 @@ btnGenerar.addEventListener('click',function(event){
     event.preventDefault();
     alertaError.textContent = '';
     if(caracteres==''){
-    alertaError.textContent = 'Favor de especificar al menos un tipo de caracter a utilizar';
-    setTimeout(function(){
-        alertaError.textContent = '';
-    },3000);
+        showAlert('Favor de especificar al menos un tipo de caracter a utilizar.');
+    }else if(level<=0){
+        showAlert('La contraseña no es lo suficientemente segura.');
     }else{
+        txtPwd.classList.add('generado');
         txtPwd.textContent= generarPWD();
-        txtPwd.style.color='#d6e4f8'
     }
 
 })
+
+function showAlert(alert){
+        alertaError.textContent = alert;
+    setTimeout(function(){
+        alertaError.textContent = '';
+    },3000);
+}
 
 function generarPWD(){
     
@@ -97,6 +105,7 @@ function generarPWD(){
     }
     return pwd;
 }
+
 const levelLabels=
 [
 'strength-level-1',
@@ -106,8 +115,10 @@ const levelLabels=
 ]
 
 function medidorSeguridad(){
+    labelStrength.textContent=''
     let pts = puntos+puntosRange+(puntos-1);
-    let level = obtenerLevel(pts);
+    level = puntos === 0 || puntosRange === 0?0: obtenerLevel(pts);
+
     for (let i = 0; i <= levelLabels.length; i++) {
         if(level>=(i+1)){
             document.getElementById(levelLabels[i]).classList.add('level_activado');
@@ -120,8 +131,7 @@ function medidorSeguridad(){
 }
 
 function obtenerLevel(pts){
-    let level=0;
-    labelStrength.textContent=''
+    
     if(pts<=6){
         level=1;
         labelStrength.textContent='Bajo'
@@ -134,6 +144,13 @@ function obtenerLevel(pts){
     }else if(pts>=11){
         level=4
         labelStrength.textContent='Muy Alto'
+    }else{
+        level=0;
     }
     return level;
 }
+btnCopiar.addEventListener('click',function(){
+    if(txtPwd.classList.contains('generado')){
+        navigator.clipboard.writeText(txtPwd.textContent)
+    }
+})
