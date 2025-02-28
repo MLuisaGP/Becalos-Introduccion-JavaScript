@@ -30,6 +30,7 @@ main{
     gap: 2rem;
     padding: 1rem;
     width: 50vw;
+    max-width: 400px;
 }
 .section-pwd,.section-setting{
     background-color: #445a73;
@@ -72,6 +73,7 @@ main{
 }
 #txt-pwd{
     color: #d6e4f867;
+    font-size: 1rem;
 }
 
 #length{
@@ -133,4 +135,9 @@ input[type="checkbox"]:checked {
 .btn-generate:hover{
     background-color: #03c987be;
     color: #e1e7edad;
+}
+
+.level_activado{
+    background-color:#ffd817dd;
+    border-color:#ffd817dd;
 }

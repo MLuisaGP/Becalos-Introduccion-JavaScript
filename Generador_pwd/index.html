@@ -35,8 +35,8 @@
                         <label for="allow-lower">Incluir caracteres en minusculas</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="allow" id="allow-numbrer">
-                        <label for="allow-numbrer">Incluir numeros</label>
+                        <input type="checkbox" name="allow" id="allow-number">
+                        <label for="allow-number">Incluir numeros</label>
                     </div>
                     <div>
                         <input type="checkbox" name="allow" id="allow-symbols">
@@ -48,19 +48,21 @@
                     <div>
                         <div class="txt-strength" id="lbl-strength"></div>
                         <div class="icons-strength">
-                            <div class="retangle-indicator" id="strength-level-1"></div>
+                            <div class="retangle-indicator " id="strength-level-1"></div>
                             <div class="retangle-indicator" id="strength-level-2"></div>
                             <div class="retangle-indicator" id="strength-level-3"></div>
                             <div class="retangle-indicator" id="strength-level-4"></div>
                         </div>
                     </div>
                 </div>
-                <button class="btn-generate">
+                <button class="btn-generate" id="btn-generate">
                     Generar
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
             </form>
+            <p class="error" id="error"></p>
         </section>
+        <script src="main.js"></script>
     </main>
 </body>
 </html>
