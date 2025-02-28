@@ -184,6 +184,8 @@ Ejercicios extras realizados en clase. Consiste en tres retos:
 ## Clase 7. Dominando el DOM en JavaScript
 
 En esta clase se siguio viendo las manera de manipular el DOM en JavaScript, por lo que fue más practico los ejercicio. Se realizo como proyecto para fortalecimiento de conocimientos un generador de contraseñas, proyecto que ayudo a fortalecer los conocimientos adquiridos, el proyecto se encuentra en el siguiente link [Generador de contraseñas](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/tree/main/Generador_pwd). En esta carpeta se tiene el html, css y main del proyecto. A continuación una visualizacion de el:
+
+
 ![Practica generador contraseñas](Assets/generador-pwd.png)
 
 Cabe mencionar que el diseño de este proyecto fue inspirado por el generador de contraseñas de [Frontend Mentor](https://www.frontendmentor.io/challenges/password-generator-app-Mr8CLycqjh)
