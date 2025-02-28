@@ -141,3 +141,13 @@ input[type="checkbox"]:checked {
     background-color:#ffd817dd;
     border-color:#ffd817dd;
 }
+.section-strength{
+    display: flex;
+    gap: 3rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    align-items: center;
+    justify-content: center;
+    color: #FFD717;
+}

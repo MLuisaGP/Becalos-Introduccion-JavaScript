@@ -3,7 +3,8 @@ const inputRange = document.getElementById('length');
 const labelRange = document.getElementById('num-character');
 const btnGenerar = document.getElementById('btn-generate');
 const alertaError = document.getElementById('error');
-let txtPwd = document.getElementById('txt-pwd');
+const txtPwd = document.getElementById('txt-pwd');
+const labelStrength = document.getElementById('lbl-strength');
 
 const minusculas = "abcdefghijklmnopqrstuvwxyz";
 const mayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -96,30 +97,43 @@ function generarPWD(){
     }
     return pwd;
 }
-
-const level1 = document.getElementById('strength-level-1');
-const level2 = document.getElementById('strength-level-2');
-const level3 = document.getElementById('strength-level-3');
-const level4 = document.getElementById('strength-level-4');
+const levelLabels=
+[
+'strength-level-1',
+'strength-level-2',
+'strength-level-3',
+'strength-level-4',
+]
 
 function medidorSeguridad(){
     let pts = puntos+puntosRange+(puntos-1);
-    let levell = obtenerLevel(pts);
-    console.log(levell);
-    
+    let level = obtenerLevel(pts);
+    for (let i = 0; i <= levelLabels.length; i++) {
+        if(level>=(i+1)){
+            document.getElementById(levelLabels[i]).classList.add('level_activado');
+        }else if(levelLabels[i]){
+            document.getElementById(levelLabels[i]).classList.remove('level_activado');
+            
+        }
+        
+    }
 }
 
 function obtenerLevel(pts){
     let level=0;
+    labelStrength.textContent=''
     if(pts<=6){
-        console.log(level);
         level=1;
+        labelStrength.textContent='Bajo'
     }else if(pts>=7 && pts<=8){
         level=2
+        labelStrength.textContent='Medio'
     }else if(pts>=9 && pts<=10){
         level=3
+        labelStrength.textContent='Alto'
     }else if(pts>=11){
         level=4
+        labelStrength.textContent='Muy Alto'
     }
     return level;
 }
