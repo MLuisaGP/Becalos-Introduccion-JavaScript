@@ -179,6 +179,14 @@ Ejercicios extras realizados en clase. Consiste en tres retos:
 
 - [Practica](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-06/Practica) Finalmente se tiene la practica de la clase. La practica consiste en hacer un centro de comentarios. El usuario agrega un comentario el cual se muestra en la pagina junto con el nombre de quien lo comentar y la fecha en que se comento. Estos comentarios se pueden eliminar. Tambien se agregaron boones para darle me gusta a la imagen (si vuelven a darle click al boton se elimina el me gusta que se acaba de agregar) y otro boton para compartir la imagen. Este ejercicio se baso en el sistema que utiliza facebook para comentar una imagen. El resultado final se puede ver en la imagen que se muestra a continuacion.
   ![Practica de la clase 6](Assets/practica6.png)
+
+
+## Clase 7. Dominando el DOM en JavaScript
+
+En esta clase se siguio viendo las manera de manipular el DOM en JavaScript, por lo que fue más practico los ejercicio. Se realizo como proyecto para fortalecimiento de conocimientos un generador de contraseñas, proyecto que ayudo a fortalecer los conocimientos adquiridos, el proyecto se encuentra en el siguiente link [Generador de contraseñas](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/tree/main/Generador_pwd). En esta carpeta se tiene el html, css y main del proyecto. A continuación una visualizacion de el:
+![Practica generador contraseñas](Assets/generador-pwd.png)
+
+Cabe mencionar que el diseño de este proyecto fue inspirado por el generador de contraseñas de [Frontend Mentor](https://www.frontendmentor.io/challenges/password-generator-app-Mr8CLycqjh)
 ## Autor
 
 Creado por [MluisaGP](https://github.com/MLuisaGP)
