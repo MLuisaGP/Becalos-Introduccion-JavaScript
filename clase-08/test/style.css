@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+section{
+    background-color: aqua;
+    display: flex;
+}
+.container-div{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(67, 67, 152);
+}
+#testa div{
+    width: 50vw;
+    height: 30vw;
+}
+#imagen{
+    background-color: rgb(68, 23, 6);
+    transition: 1000ms ease-in;
+    transform: translatex(0);
+}
+.container-div:hover{
+    transform: translateX(50px);
+}
+#cont{
+    background-color: rgb(190, 181, 46);
+    transition: 1000ms ease-in-out;
+    transform:translateX(0vw);
+}
+#cont.left{
+    transition: 1000ms ease-in-out;
+    transform:translateX(-50vw);
+}
+#imagen.right{
+    background-color: rgb(68, 23, 6);
+    transition: 1000ms ease-in;
+    transform:translatex(50vw);
+    
+}
+.hidden{
+    color: transparent;
+    transition: 1000ms;
+}
+#txt-2{
+    transition: 2000ms;
+    transform: translatex(0);
+}
+.right #txt-2{
+    transition: 2000ms;
+    transform: translatex(5rem);
+}
