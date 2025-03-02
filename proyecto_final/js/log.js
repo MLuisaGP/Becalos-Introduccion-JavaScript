@@ -101,7 +101,23 @@ function login(event){
         errLogIn.textContent= 'Email no valido';
         cleanErrMsn(errLogIn);
     }
+    
+    emailUsed = users.find(u=>u.email==email.value.trim() && u.pwd===pwd.value.trim());
+    if(emailUsed){
+        localStorage.setItem('userLogged',JSON.stringify(emailUsed));
+        window.location.href="home.html";
+    }else{
+        errLogIn.textContent='Correo o contraseña no válida.'
+        cleanErrMsn(errLogIn);
+        return;
+    }
 }
+/*
+
+qiqot@mailinator.com
+Pa$$w0rd!
+*/
+
 function findEmail(email){
     emailUsed = users.find(u=>u.email==email)??false;
     console.log(emailUsed);
