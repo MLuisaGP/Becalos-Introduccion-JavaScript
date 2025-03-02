@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoShare | login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <article class="art-form">
+            <section class="sct sct-login" id="sct-login">
+                <div class="lbl-create">
+                    <p>¿Aun no cuentas con un usuario?</p>
+                    <button class="btn-movil"  id="crearUser" onclick="displayCreate()">Crear Usuario</button>
+                </div>
+                <div class="sct-main" id="sct-main">
+                    <h1>Iniciar Sesion</h1>
+                    <form action="">
+                        <div class="container-input">
+                            <label for="email">Correo</label>
+                            <input type="email" name="email" id="emailLog" placeholder="email@mail.com">
+                        </div>
+                        <div class="container-input">
+                            <label for="pwd">Contraseña</label>
+                            <input type="password" name="pwd" id="pwdLog" placeholder="contraseña">
+                        </div>
+                    </form>
+                    <button class="btn btn-login" id="btn-login">Iniciar Sesion</button>
+                </div>
+            </section>
+            <section class="sct sct-signup hidden " id="sct-signup">
+                <div class="lbl-create">
+                    <p>¿Ya tienes una cuenta?</p>
+                    <button class="btn-movil" id="crearLogin" onclick="displayLogin()">Iniciar Sesion</button>
+                </div>
+                <div class="sct-main">
+                    <h1>Crear Usuario</h1>
+                    <form action="">
+                        <div class="container-input">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" id="nombreCreate" placeholder="Nombre Apellido">
+                        </div>
+                        <div class="container-input">
+                            <label for="email">Correo</label>
+                            <input type="email" name="email" id="emailCreate" placeholder="email@mail.com">
+                        </div>
+                        <div class="container-input">
+                            <label for="pwd">Contraseña</label>
+                            <input type="password" name="pwd" id="pwdCreate" placeholder="contraseña">
+                        </div>
+                    </form>
+                    
+                    <button class="btn btn-signup" id="btn-signup" >Crear Usuario</button>
+                </div>
+            </section>
+        </article>
+        <article class="container-over" id="container-over">
+            <div class="over-main">
+                <h2>Bienvenido</h2>
+                <p>Si aun no cuentas con una cuenta, ingresa tus datos mediante el siguiente link.</p>
+                <button class="btn btn-signup-mov" id="btn-signup-mov" onclick="displayCreate()">Crear cuenta</button>
+            </div>
+        </article>
+    </main>
+    <script src="js/log.js"></script>
+</body>
+</html>

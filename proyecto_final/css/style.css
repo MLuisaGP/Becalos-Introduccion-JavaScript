@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: #FBFBFB;
+}
+button{
+    cursor: pointer;
+}
+.art-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.sct-login,.sct-signup{
+    height: 100vh;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+form :placeholder-shown{
+    text-transform: uppercase;
+}
+#container-over {
+    display: none;
+}
+
+input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+input:focus{
+    font-size: 1rem;
+    transition: font-size ease 300ms;
+}
+.sct-main{
+    width: 60%;
+    max-width: 400px;
+    padding:2rem;
+    -webkit-box-shadow: 3px 3px 24px 6px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 3px 3px 24px 6px rgba(0, 0, 0, 0.25);
+    box-shadow: 3px 3px 24px 6px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2px;
+
+}
+.sct-main form{
+    padding: 2rem;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.container-input{
+    display: flex;
+    padding:1rem;
+    flex-direction: column;
+}
+.container-input input{
+    padding: 1rem;
+    border-bottom: 2px solid #b276ea;
+}
+.btn{
+    border: 1px solid #b276ea ;
+    padding: 1rem 3rem;
+    border-radius: 100vh;
+    color: #b276ea;
+    font-weight: bold;
+    transition:background ease 300ms;
+    text-transform: uppercase;
+}
+.btn:hover{
+    background-color: #b276ea ;
+    color: #FBFBFB;
+}
+.hidden{
+    visibility:hidden;
+}
+
+@media only screen and (max-width: 767px) {
+    main{
+        height: 100vh;
+        overflow: hidden;
+    }
+    .sct{
+        height: 100vh;
+        flex-direction: column-reverse;
+        gap: 3rem;
+        transition: visibility ease 500ms;
+    }
+    .lbl-create{
+        display: flex; 
+        flex-direction: column;
+        gap: 1rem;
+        color: #b276ea;
+    }
+    .btn-movil{
+        text-transform: uppercase;
+        font-weight: bold;
+        border: none;
+    }
+    .btn-movil:hover{
+        color: #b276ea;
+    }
+    .sct-signup{
+        height: 100vh;
+        transition: 1000ms;
+    }
+    .sct-signup.hidden{
+        transform: translateY(0);
+        /* transition: 300ms; */
+    }
+    .sct-signup{
+        transform: translateY(-100vh);
+    }
+
+    
+}
+@media only screen and (min-width: 768px){
+    .lbl-create{
+        display: none;
+    }
+    
+    #container-over {
+            display: block;
+        }
+                
+    .art-form {
+        height: 100vh;
+        flex-direction: row;
+        /* justify-content: space-evenly; */
+    }
+    .sct-login, .sct-signup {
+        width: 50%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .sct-signup{
+        z-Index:10;
+        transform:translateX(0vw);
+        transition: 500ms;
+    }
+
+    .sct-signup.hidden{
+        z-index: -1;
+        transform: translateX(-40%);
+        transition: 500ms;
+    }
+    .sct-login{
+        z-Index : 10;
+        transform:translateX(0);
+        transition: 500ms;
+    }
+    .sct-login.hidden{
+        z-Index : -1;
+        transform:translateX(40%);
+        transition:500ms;
+    }
+    .container-over {
+        position: absolute;
+        width: 50%;
+        height: 100vh;
+        z-index: 100;
+        top: 0;
+        left: 50%;
+        background-color: #294554;
+        background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+        background-attachment: fixed;
+        color: #FBFBFB;
+        font-weight: bolder;
+    }
+    #container-over{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .over-main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 3rem 2rem;
+        gap: 5rem;
+        background-color: transparent;
+    }
+    .over-main h2{
+        text-transform: uppercase;
+        font-size: 3rem;
+        background-color: transparent;
+        /* font-size: ; */
+    }
+    .over-main p{
+        max-width: 30rem;
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+        text-align: center;
+        background-color: transparent;
+    }
+    .over-main .btn{
+        background-color: #b276ea;
+        color: #FBFBFB;
+        font-size: 1rem;
+    }
+    .over-main .btn:hover{
+        background-color: transparent;
+        border-color: #b276ea;
+    }
+}
