@@ -17,7 +17,7 @@ function displayCreate(){
     signUP.classList.remove('hidden');
     over.style.left='0';
     over.style.transition="700ms";
-    over.children[0].innerHTML = '<h2>Bienvenido  de nuevo</h2> <p>Si ya cuentas con un usuario inicia sesion dando click en el siguiente link</p><button class="btn btn-login-mov" id="btn-signup-mov" onclick="displayLogin()">Iniciar Sesion</button>';
+    over.children[0].innerHTML = '<h2>Bienvenido  de nuevo</h2> <p>Si ya cuentas con un usuario, inicia sesion dando click en el siguiente link</p><button class="btn btn-login-mov" id="btn-signup-mov" onclick="displayLogin()">Iniciar Sesion</button>';
 
 }
 function displayLogin(){
