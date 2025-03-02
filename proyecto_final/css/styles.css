@@ -25,6 +25,13 @@ i{
 main{
     display: grid;
 }
+nav button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
 .sct-img {
     position: relative;
 }
@@ -33,7 +40,7 @@ main{
     justify-content: center;
     align-items: center;
     background-color: #1D1616;
-    height: 100%;
+    height: 100vh;
     gap: 1rem;
     
 }
@@ -55,6 +62,8 @@ main{
 }
 .imagen-principal{
     margin: 1rem;
+    width: 80%;
+    height: 80%;
 }
 .iconos-imagen i{
     color: #ffffff;
@@ -64,11 +73,7 @@ main{
     z-index: 10;
     background-color: aqua;
 }
-.imagen-principal{
-    align-self: center;
-    justify-self: end;
-    width: 90%;
-}
+
 /*zONA ICONOS COMENTARIOS*/
 .encabezado-comentarios{
     position: sticky;
@@ -98,9 +103,10 @@ main{
     align-items: center;
     justify-content: center;
     transition: 300ms;
+    max-height: 3rem;
 }
 
-.nav-iconos-comentarios div:hover{
+.nav-iconos-comentarios button:hover{
     cursor: pointer;
     transform: scale(1.05);
 }
@@ -131,12 +137,22 @@ hgroup{
     justify-content: end;
     gap: 1rem;
     padding: 1rem;
+    cursor: default;
+    
 }
+.sct-iconos-reacion i{
+    cursor: default;
+}
+.sct-iconos-reacion i:hover{
+    transform: none;
+}
+
 .sct-btn-reaccion{
     display: flex;
     justify-content: space-between;
     border-bottom: #4241415e solid 1px;
 }
+
 .sct-btn-reaccion button {
     margin: 0.5rem;
     width: 100%;
@@ -202,11 +218,29 @@ hgroup{
     border-radius: 1rem;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-columns: repeat(3,1fr);
     -webkit-box-shadow: 0px 0px 21px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 21px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 21px -8px rgba(0, 0, 0, 0.75);
-
+    font-size: .8rem;
+}
+.cmt-elemento .inf-user{
+    grid-column: 1/3;
+    display: flex;
+    gap: 8px;
+    justify-content: flex-start;
+    align-items: center;
+}
+.inf-user .img-perfil{
+    width: 3rem;
+    height: 100%;
+    border-radius: 100vh;
+    overflow: hidden;
+    background-color: yellowgreen;
+    transform: scale(0.8);
+}
+.inf-perfil{
+    display: flex;
+    flex-direction: column;
 }
 .cmt-elemento span{
     grid-column:1/2 ;
@@ -242,7 +276,7 @@ hgroup{
     color: #1d161651;
     text-align: center;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1524px) {
 
     main {
         width: 100vw;

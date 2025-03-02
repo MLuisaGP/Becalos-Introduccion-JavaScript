@@ -1,13 +1,21 @@
-let botonSend = document.getElementById("btn-send");
-let inputComt = document.getElementById("comentario-text");
-let showComt = document.getElementById("cmts-show");
-let contComment = document.getElementById("contador-comentarios");
-let contLikes   = document.getElementById("contador-likes");
-let contShared  = document.getElementById("contador-shared");
-let btnLiked  = document.getElementById("btn-liked");
-let btnComment  = document.getElementById("btn-comment");
-let btnShared  = document.getElementById("btn-shared");
-let textoInicio = document.getElementById("sin-coment");
+document.addEventListener("DOMContentLoaded", function(){
+    const imgPerfil = document.getElementsByClassName('imagen-user');
+    const urlPerfil = 'img/image.jpg';
+    for (let i = 0; i < imgPerfil.length; i++) {
+        imgPerfil.item(i).innerHTML=`<img src="${urlPerfil}" alt="perfil-image">`;
+    }
+    
+})
+const botonSend = document.getElementById("btn-send");
+const inputComt = document.getElementById("comentario-text");
+const showComt = document.getElementById("cmts-show");
+const contComment = document.getElementById("contador-comentarios");
+const contLikes   = document.getElementById("contador-likes");
+const contShared  = document.getElementById("contador-shared");
+const btnLiked  = document.getElementById("btn-liked");
+const btnComment  = document.getElementById("btn-comment");
+const btnShared  = document.getElementById("btn-shared");
+const textoInicio = document.getElementById("sin-coment");
 
 let contadorComentario=0;
 let contadorLiked = 4;
@@ -21,27 +29,39 @@ botonSend.addEventListener("click",function(event){
     }
 
     if(inputComt.value=='')return;
-    let contenedor = document.createElement('div')
+    let contenedor = document.createElement('div');
     contenedor.className='cmt-elemento';
 
-    let nombre = document.createElement('b');
-    nombre.textContent='Lorena Días';
-    let fecha = document.createElement('span');
-    fecha.textContent=dateNow();
-    let deleteBtn = document.createElement('button');
+    let infUser = document.createElement('div');
+    infUser.className = "inf-user";
+
+    let nombre = 'Lorena Días';
+    let dateTime = dateNow();
+    let perfilImag ="img/image.jpg"
+    infUser.innerHTML = `<div class="inf-user">
+                                <div class="img-perfil">
+                                    <img src="${perfilImag}" alt="perfil-image">
+                                </div><!--img-->
+                                <div class="inf-perfil">
+                                    <b>${nombre}</b>
+                                    <span>${dateTime}</span>
+                                </div>
+                            </div>`
+
+    const deleteBtn = document.createElement('button');
     deleteBtn.innerHTML += '<i class="fa-solid fa-trash"></i>';
-    let comentario = document.createElement('p');
+    const comentario = document.createElement('p');
     comentario.textContent=inputComt.value;
 
-    contenedor.appendChild(nombre);
-    contenedor.appendChild(fecha);
+
+    contenedor.appendChild(infUser);
     contenedor.appendChild(deleteBtn);
     contenedor.appendChild(comentario);
     showComt.insertBefore(contenedor,showComt.firstChild); //Agrega el comentario primero que todos los otros hijos
     inputComt.value='';
     contadorComentario++;
     deleteBtn.addEventListener('click',function (){
-            let parentElement = this.parentElement;
+            const parentElement = this.parentElement;
             parentElement.remove();
             contadorComentario--;
             contComment.textContent=contadorComentario;
@@ -78,6 +98,9 @@ btnComment.addEventListener('click',function(){
     inputComt.focus();
 })
 
+function logout(){
+     window.location.href = "login.html";
+};
 
 function dateNow(){
     const fechaActual = new Date();

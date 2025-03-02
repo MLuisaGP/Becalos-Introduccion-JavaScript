@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", function(){
+    const imgPerfil = document.getElementsByClassName('imagen-user');
+    
+})
+
 let botonSend = document.getElementById("btn-send");
 let inputComt = document.getElementById("comentario-text");
 let showComt = document.getElementById("cmts-show");

@@ -24,3 +24,4 @@ function displayLogin(){
     over.children[0].innerHTML = '<h2>Bienvenido</h2><p>Si aun no cuentas con una cuenta, ingresa tus datos mediante el siguiente link.</p><button class="btn btn-signup-mov" id="btn-signup-mov" onclick="displayCreate()">Crear cuenta</button>';
 
 }
+
