@@ -84,7 +84,7 @@ function createUser(event){
     users.push(userObj);
     localStorage.setItem('users',JSON.stringify(users));
     localStorage.setItem('userLogged',JSON.stringify(userObj));
-    window.location.href="home.html";
+    window.location.href="index.html";
 }
 
 function login(event){
@@ -105,7 +105,7 @@ function login(event){
     emailUsed = users.find(u=>u.email==email.value.trim() && u.pwd===pwd.value.trim());
     if(emailUsed){
         localStorage.setItem('userLogged',JSON.stringify(emailUsed));
-        window.location.href="home.html";
+        window.location.href="index.html";
     }else{
         errLogIn.textContent='Correo o contraseña no válida.'
         cleanErrMsn(errLogIn);

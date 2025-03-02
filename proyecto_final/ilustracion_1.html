@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>EchoShare | Ilustracion 1</title>
+</head>
+
+<body>
+    <main>
+        <header class="encabezado-comentarios"><!--Zona de nav-->
+            <nav class="nav-iconos-comentarios">
+                <button onclick="goHome()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 210" xml:space="preserve">
+                        <path
+                            d="M195 0h-20c-8.284 0-15 6.716-15 15v20c0 8.284 6.716 15 15 15h20c8.284 0 15-6.716 15-15V15c0-8.284-6.716-15-15-15m-80 0H95c-8.284 0-15 6.716-15 15v20c0 8.284 6.716 15 15 15h20c8.284 0 15-6.716 15-15V15c0-8.284-6.716-15-15-15M35 0H15C6.716 0 0 6.716 0 15v20c0 8.284 6.716 15 15 15h20c8.284 0 15-6.716 15-15V15c0-8.284-6.716-15-15-15m160 160h-20c-8.284 0-15 6.716-15 15v20c0 8.284 6.716 15 15 15h20c8.284 0 15-6.716 15-15v-20c0-8.284-6.716-15-15-15m-80 0H95c-8.284 0-15 6.716-15 15v20c0 8.284 6.716 15 15 15h20c8.284 0 15-6.716 15-15v-20c0-8.284-6.716-15-15-15m-80 0H15c-8.284 0-15 6.716-15 15v20c0 8.284 6.716 15 15 15h20c8.284 0 15-6.716 15-15v-20c0-8.284-6.716-15-15-15m160-80h-20c-8.284 0-15 6.716-15 15v20c0 8.284 6.716 15 15 15h20c8.284 0 15-6.716 15-15V95c0-8.284-6.716-15-15-15m-80 0H95c-8.284 0-15 6.716-15 15v20c0 8.284 6.716 15 15 15h20c8.284 0 15-6.716 15-15V95c0-8.284-6.716-15-15-15m-80 0H15C6.716 80 0 86.716 0 95v20c0 8.284 6.716 15 15 15h20c8.284 0 15-6.716 15-15V95c0-8.284-6.716-15-15-15" />
+                    </svg>
+                </button>
+
+                <button>
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m11.409 12.816-4.393 6.988a.703.703 0 0 0 1.025.934l4.728-3.581c.148-.117.337-.187.543-.187s.395.07.545.189l-.002-.001 3.494 2.621a2.25 2.25 0 0 0 3.239-.59l.005-.009 4.393-6.988a.704.704 0 0 0-1.025-.935l.002-.001-4.73 3.582c-.146.117-.333.187-.537.187s-.391-.071-.538-.189l.002.001-3.494-2.621a2.245 2.245 0 0 0-3.252.59l-.005.009zM1.026 15.55v-.084c0-7.981 6.47-14.45 14.45-14.45q.277 0 .552.01l-.026-.001c.156-.006.34-.01.524-.01 7.98 0 14.45 6.469 14.45 14.45v.089-.005.083c0 7.98-6.469 14.45-14.45 14.45q-.277 0-.552-.01l.026.001h-.037c-1.527 0-3.006-.21-4.408-.601l.115.027a1.2 1.2 0 0 0-.806.066l.008-.003-2.983 1.31a1.197 1.197 0 0 1-1.684-1.059v-.002l-.087-2.671a1.2 1.2 0 0 0-.398-.848l-.001-.001A14.18 14.18 0 0 1 1.028 15.74l.001-.2v.01z" />
+                    </svg>
+                </button>
+
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve">
+                        <path
+                            d="M12 2c-.8 0-1.5.7-1.5 1.5v.7C7.3 4.9 5 7.6 5 11v4.5l-2 2.3V19h18v-1.2l-2-2.3V11c0-3.4-2.3-6.1-5.5-6.8v-.7c0-.8-.7-1.5-1.5-1.5m-2 18c0 1.1.9 2 2 2s2-.9 2-2z" />
+                        <path style="fill:none" d="M0 0h24v24H0z" />
+                    </svg>
+                </button>
+                <button onclick="logout()">
+                    <div class="img-perfil imagen-user">
+                        <img src="img/perfil/default.jpg" alt="perfil-image">
+                    </div>
+                </button>
+            </nav>
+        </header>
+        <!--Seccion de la imagen-->
+        <article class="sct-img">
+            <section class="iconos-imagen"><!--Seccion de los iconos-->
+                <div>
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <i class="fa-solid fa-magnifying-glass-minus"></i>
+                    <i class="fa-solid fa-tag"></i>
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                </div>
+            </section>
+            <section class="main-img"><!--parte de la imagen-->
+                <div class="imagen-principal">
+                    <img src="img/picture.jpg" alt="imagen de prueba">
+                </div>
+            </section>
+
+        </article>
+
+        <!--Seccion de los comentarios-->
+        <article class="sct-comentarios">
+
+            <section class="main-comentarios">
+                <div class="sct-descripcion"><!--Description-->
+                    <div class="titulo-descripcion">
+                        <div class="img-perfil">
+                            <img src="img/brand.jpg" alt="imagen-brand">
+                        </div><!--img-->
+                        <hgroup>
+                            <h2>Arte ilustrativa</h2>
+                            <h4>1 dia</h4>
+                        </hgroup>
+                        <div>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                    </div>
+                    <p>A veces, la paz se encuentra en los lugares más simples 🍃✨. Una mujer sentada en calma, rodeada por la belleza de los
+                    árboles, recordándonos que siempre hay espacio para respirar y reconectar con uno mismo.</p>
+                    <div class="sct-iconos-reacion">
+                        <div>
+                            <span id="contador-likes">4</span>
+                            <i class="fa-solid fa-thumbs-up"></i>
+                        </div>
+                        <div>
+                            <span id="contador-comentarios">0</span>
+                            <i class="fa-solid fa-comment"></i>
+                        </div>
+                        <div>
+                            <span id="contador-shared">3</span>
+                            <i class="fa-solid fa-share"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="sct-btn-reaccion">
+                    <button id="btn-liked"><i class="fa-regular fa-thumbs-up"></i></button>
+                    <button id="btn-comment"><i class="fa-regular fa-comment"></i></button>
+                    <button id="btn-shared"><i class="fa-solid fa-share"></i></button>
+                </div>
+
+
+                <div class="sct-coment"><!--Zona donde se ponen los comentarios y el formulario-->
+                    
+                    <div class="sct-input"><!--Zona en que se tiene el formulario-->
+
+                        <div class="img-perfil imagen-user">
+                            <img src="img/perfil/default.jpg" alt="perfil-image">
+                        </div>
+                        <div class="sct-formulario">
+                            <form action="">
+                                <div class="comentario-input">
+                                    <input id="comentario-text" type="text" placeholder="Escribe un comentario..."
+                                        required>
+                                </div>
+                                <button class="btn-send" id="btn-send"><i class="fa-solid fa-angles-right"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="cmts-show" class="acciones"><!--Zona en que se guardan los comentario-->
+                        <p id="sin-coment">Se el primero en comentar</p>
+
+                    </div>
+                </div>
+
+            </section>
+        </article>
+
+    </main>
+    <script src="js/ilustracion1.js"></script>
+</body>
+
+</html>
