@@ -1,10 +1,16 @@
+let user = JSON.parse(localStorage.getItem('userLogged'));
+
 document.addEventListener("DOMContentLoaded", function(){
+    if(!user){
+        window.location.href='login.html';
+    }
+    
     const imgPerfil = document.getElementsByClassName('imagen-user');
-    const urlPerfil = 'img/image.jpg';
+    const urlPerfil = user.urlImg;
     for (let i = 0; i < imgPerfil.length; i++) {
         imgPerfil.item(i).innerHTML=`<img src="${urlPerfil}" alt="perfil-image">`;
     }
-    
+    showComents();
 })
 const botonSend = document.getElementById("btn-send");
 const inputComt = document.getElementById("comentario-text");
@@ -15,83 +21,61 @@ const contShared  = document.getElementById("contador-shared");
 const btnLiked  = document.getElementById("btn-liked");
 const btnComment  = document.getElementById("btn-comment");
 const btnShared  = document.getElementById("btn-shared");
-const textoInicio = document.getElementById("sin-coment");
 
-let contadorComentario=0;
-let contadorLiked = 4;
-let conadorShared = 3;
+let comentariosStorage = JSON.parse(localStorage.getItem('comentarios-i1'))??[];
+let imagenLiked = JSON.parse(localStorage.getItem('liked-i1'))??[];
+let imagenShared = localStorage.getItem('shared-i1')??0;
+
+//Poner el numero de compartidos, comentados y me gustas
+actualizarCntAcciones();
 
 botonSend.addEventListener("click",function(event){
     event.preventDefault();
 
-    if(contadorComentario==0){
-        showComt.removeChild(textoInicio);
+    // if(comentariosStorage.length==0){
+    //     showComt.removeChild(textoInicio);
+    // }
+
+    if(inputComt.value.trim()=='')return;
+    let nombre = user.nombre;
+    let dateTime = dateNow();
+    let perfilImag =user.urlImg;
+
+    let comtObj = {
+        nombre:nombre,
+        dateTime:dateTime,
+        perfilImag:perfilImag,
+        text:inputComt.value.trim()
     }
 
-    if(inputComt.value=='')return;
-    let contenedor = document.createElement('div');
-    contenedor.className='cmt-elemento';
-
-    let infUser = document.createElement('div');
-    infUser.className = "inf-user";
-
-    let nombre = 'LorenawDíaswwwww';
-    let dateTime = dateNow();
-    let perfilImag ="img/image.jpg"
-    infUser.innerHTML = `<div class="inf-user">
-                                <div class="img-perfil">
-                                    <img src="${perfilImag}" alt="perfil-image">
-                                </div><!--img-->
-                                <div class="inf-perfil">
-                                    <b>${nombre}</b>
-                                    <span>${dateTime}</span>
-                                </div>
-                            </div>`
-
-    const deleteBtn = document.createElement('button');
-    deleteBtn.innerHTML += '<i class="fa-solid fa-trash"></i>';
-    const comentario = document.createElement('p');
-    comentario.textContent=inputComt.value;
-
-
-    contenedor.appendChild(infUser);
-    contenedor.appendChild(deleteBtn);
-    contenedor.appendChild(comentario);
-    showComt.insertBefore(contenedor,showComt.firstChild); //Agrega el comentario primero que todos los otros hijos
-    inputComt.value='';
-    contadorComentario++;
-    deleteBtn.addEventListener('click',function (){
-            const parentElement = this.parentElement;
-            parentElement.remove();
-            contadorComentario--;
-            contComment.textContent=contadorComentario;
-            if(contadorComentario==0){
-                showComt.innerHTML='<p id="sin-coment">Se el primero en comentar</p>';
-                textoInicio = document.getElementById("sin-coment");
-            }
-        }
-    );
-    contComment.textContent=contadorComentario;
+    comentariosStorage.push(comtObj);
+    localStorage.setItem('comentarios-i1',JSON.stringify(comentariosStorage));
+    showComents();
+    actualizarCntAcciones();
 })
 
-let flagLiked = false;
+let flagLiked = imagenLiked.find(u=>u==user.email);
+if(flagLiked)btnLiked.classList.add("activo-btn");
+
 btnLiked.addEventListener('click',function(){
     if(flagLiked){
-        contadorLiked--;
         btnLiked.classList.remove("activo-btn");
+        imagenLiked.pop(flagLiked);
         flagLiked = !flagLiked ;
     }else{
         flagLiked = !flagLiked ;
-        contadorLiked++;
+        imagenLiked.push(user.email);
         btnLiked.className="activo-btn";
     }
-    contLikes.textContent=contadorLiked;
+    localStorage.setItem('liked-i1',JSON.stringify(imagenLiked))
+    actualizarCntAcciones();
 })
 
 btnShared.addEventListener('click',function(){
     alert('Haz compartido la imagen');
-    conadorShared++;
-    contShared.textContent=conadorShared;
+    imagenShared= parseInt(imagenShared)+1;
+    localStorage.setItem('shared-i1',JSON.stringify(imagenShared))
+    actualizarCntAcciones();
 })
 
 btnComment.addEventListener('click',function(){
@@ -99,6 +83,7 @@ btnComment.addEventListener('click',function(){
 })
 
 function logout(){
+    localStorage.removeItem('userLogged');
      window.location.href = "login.html";
 };
 
@@ -113,4 +98,55 @@ function dateNow(){
 
     const fechaFormateada = `${dia}-${mes}-${anio} ${hora}:${minuto}`;
     return fechaFormateada;
+}
+
+function actualizarCntAcciones(){
+
+    contComment.textContent=comentariosStorage.length;
+    contLikes.textContent  =imagenLiked.length;
+    contShared.textContent =imagenShared;
+}
+
+function showComents(){
+    showComt.innerHTML='';
+    if(comentariosStorage.length==0){
+        showComt.innerHTML='<p id="sin-coment">Se el primero en comentar</p>';
+    }
+    comentariosStorage.forEach(comentario => {
+        let contenedor = document.createElement('div');
+        contenedor.className='cmt-elemento';
+        let infUser = document.createElement('div');
+
+        infUser.className = "inf-user";
+        infUser.innerHTML = `<div class="inf-user">
+                                <div class="img-perfil">
+                                    <img src="${comentario.perfilImag}" alt="perfil-image">
+                                </div><!--img-->
+                                <div class="inf-perfil">
+                                    <b>${comentario.nombre}</b>
+                                    <span>${comentario.dateTime}</span>
+                                </div>
+                            </div>`;
+        const deleteBtn = document.createElement('button');
+        deleteBtn.innerHTML += '<i class="fa-solid fa-trash"></i>';
+        const cometarioP = document.createElement('p');
+        cometarioP.textContent=comentario.text;
+
+        contenedor.appendChild(infUser);
+        contenedor.appendChild(deleteBtn);
+        contenedor.appendChild(cometarioP);
+        showComt.insertBefore(contenedor,showComt.firstChild); //Agrega el comentario primero que todos los otros hijos
+        inputComt.value='';
+        deleteBtn.addEventListener('click',function (){
+            const parentElement = this.parentElement;
+            parentElement.remove();
+            comentariosStorage.pop(comentario);
+            localStorage.setItem('comentarios-i1',JSON.stringify(comentariosStorage));
+            // contComment.textContent=contadorComentario;
+            if(comentariosStorage.length==0){
+                showComt.innerHTML='<p id="sin-coment">Se el primero en comentar</p>';
+            }
+            actualizarCntAcciones();
+        });
+    });
 }
