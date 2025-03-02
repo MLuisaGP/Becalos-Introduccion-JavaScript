@@ -35,7 +35,7 @@ botonSend.addEventListener("click",function(event){
     let infUser = document.createElement('div');
     infUser.className = "inf-user";
 
-    let nombre = 'Lorena Días';
+    let nombre = 'LorenawDíaswwwww';
     let dateTime = dateNow();
     let perfilImag ="img/image.jpg"
     infUser.innerHTML = `<div class="inf-user">
