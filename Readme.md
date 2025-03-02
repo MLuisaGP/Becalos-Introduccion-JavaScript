@@ -197,7 +197,7 @@ En esta seccion se dio una vista y uso de los local storage, los cuales son util
 
 Esta parte se vio el proyecto final el cual se encuentra en la carpeta [proyecto-final](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/tree/main/proyecto_final). El proyecto consiste en utilizar los localstorage y el dom, como todos los conceptos aprendidos en clases. 
 El proyecto consta de una plataforma donde hay imagenes donde varios usuarios pueden comentar en ellos.
-Se tiene el inicio de sesión, y la creación de un usuario (MAXIMO SE PUEDEN CREAN AL MOMENTO 4 USUARIOS). A continuacion se muestra la pantalla de crear usuario e inicio de sesion.
+Se tiene el inicio de sesión, y la creación de un usuario (MAXIMO SE PUEDEN CREAR 4 USUARIOS). A continuacion se muestra la pantalla de crear usuario e inicio de sesion.
 
 Inicio sesion: en esta sessión se tienen las validaciones donde el email y contraseña deben de estar declaradas cuando se quiere iniciar sesion y si el usuario y la contraseña esten registradas
 ![Practica final iniciar sesion](Assets/inicio-sesion.png)
