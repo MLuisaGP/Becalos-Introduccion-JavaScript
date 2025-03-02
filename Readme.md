@@ -189,6 +189,41 @@ En esta clase se siguio viendo las manera de manipular el DOM en JavaScript, por
 ![Practica generador contraseñas](Assets/generador-pwd.png)
 
 Cabe mencionar que el diseño de este proyecto fue inspirado por el generador de contraseñas de [Frontend Mentor](https://www.frontendmentor.io/challenges/password-generator-app-Mr8CLycqjh)
+
+
+## Clase final. Proyecto Final
+
+En esta seccion se dio una vista y uso de los local storage, los cuales son utilizados para guardar datos en memoria, estos datos solo se pueden guardar en string y se tienen todas las notas referente a ello en la carpeta [clase-8](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/tree/main/clase-08).
+
+Esta parte se vio el proyecto final el cual se encuentra en la carpeta [proyecto-final](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/tree/main/proyecto_final). El proyecto consiste en utilizar los localstorage y el dom, como todos los conceptos aprendidos en clases. 
+El proyecto consta de una plataforma donde hay imagenes donde varios usuarios pueden comentar en ellos.
+Se tiene el inicio de sesión, y la creación de un usuario (MAXIMO SE PUEDEN CREAN AL MOMENTO 4 USUARIOS). A continuacion se muestra la pantalla de crear usuario e inicio de sesion.
+
+Inicio sesion: en esta sessión se tienen las validaciones donde el email y contraseña deben de estar declaradas cuando se quiere iniciar sesion y si el usuario y la contraseña esten registradas
+![Practica final iniciar sesion](Assets/inicio-sesion.png)
+
+Crear usuario: cuenta con validaciones donde el nombre del usuario no debe de ser mayor a 15 caracteres, contar con un correo unico(no registrado anteriormente), contraseña definida y no exceder de los 4 usuarios.
+![Practica final crear usuario](Assets/crear-user.png)
+
+Al crear o iniciar sesion te mandara a la pantalla de inicio. donde se tiene dos imagenes que se pueden entrar y realizar comentarios, darle me gusta y compartir las imagenes. Los usuarios pueden ver los comentarios de otros usuarios pero no pueden eliminar esos comentarios, sin embargo si pueden eliminar sus propios comentarios. 
+
+A continuacion se muestra la pantalla de inicio:
+![Practica final home](Assets/home-ilustracion.png)
+
+La vista para ver las imagenes y poder comentarlas se puede apreciar en la siguiente imagen:
+![Practica final pantalla imagenes](Assets/area-comentarios.png)
+
+Como podemos ver, se aprovecho el diseño de la [Practica de la clase 6](https://github.com/MLuisaGP/Becalos-Introduccion-JavaScript/blob/main/Clase-06/Practica). Sin embargo se hizo uso de localstorage, se almacena el numero de usuarios que le dieron like a la imagen y si el usuarios ya le habia dado like se mantiene selecionado el boton like, se almacena los compartidos de cada usuarios y los comentarios de cada usuario. Tambien podemos notar que los comentarios creados por el usuario actual cuenta con un boton para eliminar su comentario, mientras que los comentarios de otros usuarios no se pueden eliminar.
+
+Para poder regresar al menu principal damos click en el siguiente boton que se encuentra en la barra de navegacion:
+
+![boton home](Assets/boton-home.png)
+
+Y para cerrar sesion damos click en la foto de perfil que se encuentra en la barra de navegación:
+
+![boton home](Assets/foto-perfil.png)
+
+
 ## Autor
 
 Creado por [MluisaGP](https://github.com/MLuisaGP)
